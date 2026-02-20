@@ -4,7 +4,7 @@ export const caseStudies = [
         title: "Production Operations Intelligence System",
         subtitle: "Bespoke Fashion House System",
         role: "Systems Architect",
-        year: "2024",
+        year: "2026",
         outcome: "70-80% Less Reconciliation",
         roi: "Reduced Disputes",
         image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVftbrmzVif69fTyZsHSifgicK2NE3IEOZKLCTe7KRPeWahxh4_p-PfCDC1WyN6XrOXkjUQMvuZg5pdEsGloQIHvDjkrQKEe87-2NKa-WOaih8OD_UZs3vObcSjmpvU_bLHdB-war0nKrpy5V8yUCyL-VyEfpSMp86MF3G2v5EtSJMMOJ4wFx2p-bzEzjf3N_TEbItAdNffpjCXDbmlUjm_DcPZyT3JkiZPOzSzZLzPdOaskXfwMfrAxEXiCP15tCEcuyWzqAr30Bs", // Keeping existing image for layout

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
+import resumePdf from '../assets/Clinton Osunbor CV.pdf';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -80,7 +81,7 @@ export default function Navbar() {
                     <FaLinkedin className="text-2xl" />
                 </a>
                 <a
-                    href="/resume.pdf"
+                    href={resumePdf}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-bold uppercase tracking-wider border border-slate-900 dark:border-white px-4 py-2 hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all rounded-full"
@@ -99,7 +100,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Overlay */}
             {isOpen && (
-                <div className="fixed inset-0 h-screen w-screen bg-background-light dark:bg-background-dark z-40 flex flex-col items-center justify-start pt-32 pb-12 space-y-8 text-xl font-medium text-slate-900 dark:text-white overflow-y-auto">
+                <div className="fixed inset-0 h-[100svh] w-screen bg-background-light dark:bg-background-dark z-40 flex flex-col items-center justify-start pt-32 pb-12 space-y-8 text-xl font-medium text-slate-900 dark:text-white overflow-y-auto">
                     <a href="#" onClick={(e) => scrollToSection(e, '#root')}>Home</a>
                     <a href="#about" onClick={(e) => scrollToSection(e, '#about')}>About</a>
                     <a href="#projects" onClick={(e) => scrollToSection(e, '#projects')}>Case Studies</a>
@@ -109,7 +110,7 @@ export default function Navbar() {
                             <FaLinkedin className="text-3xl" />
                         </a>
                         <a
-                            href="/resume.pdf"
+                            href={resumePdf}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-sm font-bold uppercase tracking-wider border border-slate-900 dark:border-white px-6 py-3 rounded-full hover:bg-slate-900 hover:text-white dark:hover:bg-white dark:hover:text-black transition-all"

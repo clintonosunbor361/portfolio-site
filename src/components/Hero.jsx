@@ -32,7 +32,7 @@ export default function Hero() {
     const longest = words.reduce((a, b) => (a.length > b.length ? a : b), "");
 
     return (
-        <header className="pt-32 pb-16 px-6 md:px-12 lg:px-24 flex items-center custom-height relative z-10">
+        <header className="pt-32 pb-16 px-6 md:px-12 lg:px-24 flex items-center min-h-[100svh] relative z-10">
             <div className="max-w-6xl w-full mx-auto text-left relative z-10">
                 <div className="mb-4">
                     <span className="inline-block px-3 py-1 bg-white dark:bg-slate-800 rounded-full border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase tracking-widest text-slate-900 dark:text-white shadow-sm">
@@ -40,7 +40,7 @@ export default function Hero() {
                     </span>
                 </div>
 
-                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter mb-8 text-slate-900 dark:text-white">
+                <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter mb-8 text-slate-900 dark:text-white">
                     I cut across{" "}
                     <span className="relative inline-block align-baseline">
                         <span className="invisible">{longest}</span>

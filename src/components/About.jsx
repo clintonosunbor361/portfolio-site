@@ -52,7 +52,7 @@ export default function About() {
                         </li>
                         <li className="flex items-start">
                             <span className="mr-3 mt-1.5 w-1.5 h-1.5 bg-slate-900 dark:bg-white rounded-full flex-shrink-0"></span>
-                            Make decisions based on reliable operational insights.
+                            Turn operational data into practical insights for better decisions,
                         </li>
                     </ul>
                 </div>

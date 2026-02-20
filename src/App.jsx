@@ -19,7 +19,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-screen bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-slate-300 dark:selection:bg-slate-700">
+      <div className="min-h-[100svh] bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-slate-300 dark:selection:bg-slate-700">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

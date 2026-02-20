@@ -21,7 +21,7 @@ export default function CaseStudyDetail() {
     const nextProject = caseStudies[currentIndex + 1] || caseStudies[0];
 
     return (
-        <div className="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-slate-300 dark:selection:bg-slate-700 min-h-screen">
+        <div className="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-slate-300 dark:selection:bg-slate-700 min-h-[100svh]">
             {/* Navigation is handled by App.jsx or we can add a specific back button here as per template */}
 
             <header className="pt-24 px-6 md:px-12 lg:px-24 pb-8">

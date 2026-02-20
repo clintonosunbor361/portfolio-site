@@ -35,7 +35,7 @@ export default function Projects() {
                         </div>
                     </div>
                     <div className={`lg:col-span-8 ${index % 2 === 0 ? 'order-1 lg:order-2' : ''} relative`}>
-                        <div className={`absolute -top-4 ${index % 2 === 0 ? '-left-4' : '-right-4'} bg-black text-white dark:bg-white dark:text-black text-xs font-mono px-2 py-1 z-10`}>
+                        <div className={`absolute -top-4 ${index % 2 === 0 ? '-left-4' : '-right-4'} bg-black text-white dark:bg-white dark:text-black text-xs font-mono px-2 py-1 z-30`}>
                             {project.roi || project.compliance || `Users: ${project.users || 'N/A'}`}
                         </div>
                         <Link to={`/case-study/${project.id}`} className="block relative overflow-hidden group z-20">
