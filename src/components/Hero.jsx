@@ -41,7 +41,7 @@ export default function Hero() {
                 </div>
 
                 <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tighter mb-8 text-slate-900 dark:text-white">
-                    I am a specialist in {" "}
+                    I cut across {" "}
                     <span className="relative inline-block align-baseline">
                         <span className="invisible">{longest}</span>
                         <span
