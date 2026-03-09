@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
-import resumePdf from '../assets/Clinton Osunbor CV.pdf';
+import resumePdf from '../assets/Clinton Osunbor - CV.pdf';
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
