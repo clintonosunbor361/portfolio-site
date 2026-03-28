@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useLayoutEffect } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import CaseStudyDetail from './components/CaseStudyDetail';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/case-study/:id" element={<CaseStudyDetail />} />
         </Routes>
         <Footer />
+        <Analytics />
       </div>
     </BrowserRouter>
   );
