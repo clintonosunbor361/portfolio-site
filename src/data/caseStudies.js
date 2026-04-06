@@ -16,27 +16,27 @@ export const caseStudies = [
         },
         strategy: [
             {
-                title: "Phase 1: Centralised the Data",
+                title: "Phase 1 - Step 1: Centralised the Data",
                 description: "Replaced scattered sheets and paper records with a single structured Google Sheet. Introduced garment-level tracking using a unique key per item combining Ticket ID, Product Type, and Item Number, giving every garment a traceable identity for the first time."
             },
             {
-                title: "Phase 1: Automated Payments and Summaries",
+                title: "Phase 1 - Step 2: Automated Payments and Summaries",
                 description: "Built a centralised rate database and used Google Apps Script to automate payment calculations and weekly summaries. What previously took hours of manual work ran automatically with consistent, accurate outputs."
             },
             {
-                title: "Phase 1: Designed Production Reports",
+                title: "Phase 1 - Step 3: Designed Production Reports",
                 description: "Designed real-time reports covering items produced per category, backlog status, and average production time by category. For the first time, management could see what was happening on the floor without chasing the data."
             },
             {
-                title: "Phase 2: Identified the Ceiling",
+                title: "Phase 2 - Step 1: Identified the Ceiling",
                 description: "The spreadsheet system worked but could not scale. There were no access controls, real-time collaboration was unreliable, and the logic had grown complex enough that it belonged in a proper system."
             },
             {
-                title: "Phase 2: Translated Workflow into Software Architecture",
+                title: "Phase 2 - Step 2: Translated Workflow into Software Architecture",
                 description: "The production workflow, already broken down and validated in the spreadsheet phase, was redesigned as a structured software system. Additional logic was introduced covering role-based permissions, task assignment, QC verification, and payment processing."
             },
             {
-                title: "Phase 2: Directed the Build",
+                title: "Phase 2 - Step 3: Directed the Build",
                 description: "Working as systems architect, the workflow and data model were translated into a full web application built on Next.js and Supabase. PostgreSQL handles structured data storage, Supabase Auth manages authentication, and Row Level Security enforces access control at the database level, ensuring each role only sees and does what they are permitted to."
             }
         ],
