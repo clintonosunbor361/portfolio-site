@@ -56,6 +56,18 @@ export default function CaseStudyDetail() {
                             <span className="text-xs font-mono uppercase text-gray-500 dark:text-gray-400 block mb-2">Impact</span>
                             <span className="text-lg font-bold">{project.outcome.toUpperCase()}</span>
                         </div>
+                        {project.demoCallout && (
+                            <div>
+                                <span className="text-xs font-mono uppercase text-gray-500 dark:text-gray-400 block mb-2">Live Demo</span>
+                                <a
+                                    href="#demo"
+                                    className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 dark:text-white border border-black dark:border-white px-4 py-2 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+                                >
+                                    <span>Explore the App</span>
+                                    <span>↓</span>
+                                </a>
+                            </div>
+                        )}
                     </div>
                 </div>
             </header>
@@ -117,7 +129,7 @@ export default function CaseStudyDetail() {
 
                     {/* Demo Callout — only renders if demoCallout exists on the project */}
                     {project.demoCallout && (
-                        <section className="border border-gray-200 dark:border-gray-700 rounded-sm p-8 bg-gray-50 dark:bg-slate-900">
+                        <section id="demo" className="border border-gray-200 dark:border-gray-700 rounded-sm p-8 bg-gray-50 dark:bg-slate-900">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                                 <div>
                                     <span className="text-xs font-mono uppercase text-gray-500 dark:text-gray-400 block mb-1">Live Demo</span>
