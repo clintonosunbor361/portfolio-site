@@ -4,56 +4,56 @@ export const caseStudies = [
         title: "Production Operations Intelligence System",
         subtitle: "Bespoke Fashion House System",
         role: "Systems Architect",
-        year: "2026",
-        outcome: "70-80% Less Reconciliation",
-        roi: "Reduced Disputes",
-        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCVftbrmzVif69fTyZsHSifgicK2NE3IEOZKLCTe7KRPeWahxh4_p-PfCDC1WyN6XrOXkjUQMvuZg5pdEsGloQIHvDjkrQKEe87-2NKa-WOaih8OD_UZs3vObcSjmpvU_bLHdB-war0nKrpy5V8yUCyL-VyEfpSMp86MF3G2v5EtSJMMOJ4wFx2p-bzEzjf3N_TEbItAdNffpjCXDbmlUjm_DcPZyT3JkiZPOzSzZLzPdOaskXfwMfrAxEXiCP15tCEcuyWzqAr30Bs", // Keeping existing image for layout
-        codeImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDBItKeI7SnUm6PdASYU4GVo5A_TAxIGgS9AWAZ42UvWFYp61UOVDNpQZGR_3ZgP6Nrl5WELqNxGOVJqFSsjSmrt2Qr4f3hS0kQANWvFhc1Yfk23-AF9nIOukt75phSc1ggB2-y6Vg3TDI_L-l1iChy-m8HpXlE61130INO6yoaUQ-9POEgQeX_ES7TSyagopaCeldCgsTaanbXNyEq1xdi2mu8waLkdJ9h3C5H1dXDjdErLKCUWVcV20XGilxSKl3dLBuCoxIc7rER",
-        description: "As the fashion house grew, production data became scattered across multiple spreadsheets. Production intake, task tracking, quality checks, and payment calculations were loosely connected. This made it difficult for management to clearly see how many garments were completed, who completed what, and whether payments were calculated correctly. Decisions were increasingly based on assumptions instead of structured data.",
+        year: "2025 — 2026",
+        outcome: "End-to-End Production Visibility",
+        roi: "Live Production System",
+        image: "https://portfolio-site-2-ecru.vercel.app/Maison%20Dashboard.png",
+        codeImage: "https://portfolio-site-2-ecru.vercel.app/Maison%20Production%20Page.png",
+        description: "A fast-growing fashion house was managing production across scattered spreadsheets. Intake, task tracking, quality checks, and payment calculations were loosely connected and prone to errors. Payments were disputed weekly, reports were misleading, and management had no clear view of what was actually happening on the production floor.",
         challenge: {
             title: "The Problem",
-            quote: "Inconsistent payments, no garment-level tracking, misleading reports based on intake dates, and heavy manual reconciliation were costing us time and trust."
+            quote: "We had no way to track individual garments, payments were disputed every week, and reports were based on when items came in, not when they were actually finished."
         },
         strategy: [
             {
-                title: "1. Structured the Workflow",
-                description: "Separated operations into clear layers: Production Intake, QC Validation, Payment Rate Engine, and Automated Reporting. This removed overlap and created clean data relationships."
+                title: "Phase 1 - Step 1: Structured the Data",
+                description: "Replaced scattered spreadsheets with a structured Google Sheets system. Introduced garment-level tracking using a unique key per item combining Ticket ID, Product Type, and Item Number."
             },
             {
-                title: "2. Introduced Garment-Level Tracking",
-                description: "Created a unique key for every garment (Ticket ID | Product Type | Item Number). This allowed accurate tracking per garment, clear performance measurement, and reliable payment calculations."
+                title: "Phase 1 - Step 2: Automated the Calculations",
+                description: "Built a centralized rate database and used Google Apps Script to automate payment calculations and production summaries, removing manual reconciliation entirely."
             },
             {
-                title: "3. Automated Payment Calculations",
-                description: "Built a centralized rate database. Payments were automatically calculated based on Garment type, Category, and Task completed. This eliminated manual rate referencing and reduced disputes."
+                title: "Phase 1 - Step 3: Fixed Reporting Logic",
+                description: "Redesigned reports so output was based on completion date, not intake date, aligning performance data with operational reality for the first time."
             },
             {
-                title: "4. Fixed Production Reporting Logic",
-                description: "Redesigned reports so output depended on completion date, not intake date. This aligned performance reports with operational reality."
+                title: "Phase 2 - Step 1: Identified the Ceiling",
+                description: "The spreadsheet system worked but could not scale. There were no access controls, no real-time visibility, and no audit trail. A proper software system was needed."
             },
             {
-                title: "5. Automated Production Summaries",
-                description: "Using Google Apps Script, I aggregated production intake and QC data, applied dynamic date filters, and generated automated production summaries. Manual reconciliation was largely removed."
+                title: "Phase 2 - Step 2: Built the ERP",
+                description: "Designed and directed the development of a full web application using Next.js and Supabase. Implemented role-based access control across five roles: Admin, Production, QC, Accounts, and Completion."
             },
             {
-                title: "6. Executive Dashboard Visualization",
-                description: "Connected the structured production data to Looker Studio dashboards to visualize Weekly production output, Tailor-level performance, and Category workload distribution."
+                title: "Phase 2 - Step 3: Production-Grade Architecture",
+                description: "Built with a band-based payment engine, garment-level work assignment tracking, and automated payroll calculation across all tailors, replacing every manual process from Phase 1."
             }
         ],
         execution: {
             title: "The Execution",
-            description: "I designed and implemented a structured production and compensation system that replaced fragmented tracking with a clear, rule-based framework. Tools used included Google Sheets (Structured Data System), Google Apps Script (Automation & Reporting Engine), and Looker Studio.",
-            image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAvgYY05vdGxc64sMYnRwLNWGYTANhunSZtQaG1ARVF0Ljc-_V-meJM7T6ZC4wlbsFBf_fPjzbTsPXZqO9jKFHO9X8-Tkt0p6QJvDCAb1_bvHHGe6VKFymSrB3Vz3EpsCX6IQ1s-Ly5XBaCivZgRFxnnz2NbsPciwf6OenAopKvW4E6RzcaIqt-vM1Zs5neysqWsJ9tJ2BxYJb2ri6BupsB9Ry_via5Ced_pNAsA2PNoo6S43qL9RP3hp-Gw4oC4WVapINI783vZ0N2",
-            caption: "Fig 1.1: Production Data Flow"
+            description: "The system evolved in two deliberate phases, first proving the concept with structured spreadsheets and automation, then designing and directing the build of a production-grade web application when the operation outgrew what spreadsheets could support.",
+            image: "https://portfolio-site-2-ecru.vercel.app/Maison%20Account%20Page.png",
+            caption: "Fig 1.1: Accounts and Payroll Module"
         },
         results: {
             stats: [
                 { value: "80%", label: "Less Reconciliation" },
                 { value: "100%", label: "Traceable Payments" },
-                { value: "Live", label: "Visibility" }
+                { value: "Live", label: "Production System" }
             ],
             testimonial: {
-                quote: "Decisions are no longer based on assumptions. We have a clear, structured framework for our entire production line.",
+                quote: "We went from chasing payments in spreadsheets to having a live system where every garment, every tailor, and every payment is tracked in real time.",
                 author: "Operations Director"
             }
         }
