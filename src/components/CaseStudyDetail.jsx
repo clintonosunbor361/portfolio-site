@@ -22,7 +22,6 @@ export default function CaseStudyDetail() {
 
     return (
         <div className="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-slate-300 dark:selection:bg-slate-700 min-h-[100svh]">
-            {/* Navigation is handled by App.jsx or we can add a specific back button here as per template */}
 
             <header className="pt-24 px-6 md:px-12 lg:px-24 pb-8">
                 <div className="max-w-7xl mx-auto">
@@ -32,7 +31,7 @@ export default function CaseStudyDetail() {
                             Back to Case Studies
                         </Link>
                         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tighter text-slate-900 dark:text-white font-serif">
-                            {/* Assuming numbering logic or adding it to data */}{currentIndex + 1 < 10 ? `0${currentIndex + 1}` : currentIndex + 1}: {project.title.toUpperCase()} <br />
+                            {currentIndex + 1 < 10 ? `0${currentIndex + 1}` : currentIndex + 1}: {project.title.toUpperCase()} <br />
                             <span className="serif-italic font-normal text-slate-600 dark:text-slate-400">{project.subtitle}</span>
                         </h1>
                     </div>
@@ -63,15 +62,15 @@ export default function CaseStudyDetail() {
 
             <main className="px-6 md:px-12 lg:px-24 py-16">
                 <div className="max-w-4xl mx-auto space-y-24">
+
+                    {/* The Challenge */}
                     <section className="grid grid-cols-1 md:grid-cols-12 gap-12">
                         <div className="md:col-span-4">
                             <h2 className="text-2xl font-bold uppercase tracking-wide border-l-4 border-black dark:border-white pl-4">The Challenge</h2>
                         </div>
                         <div className="md:col-span-8">
                             {project.challenge && (
-                                <>
-                                    <h3 className="text-3xl font-serif italic mb-6 text-slate-700 dark:text-slate-300">"{project.challenge.quote}"</h3>
-                                </>
+                                <h3 className="text-3xl font-serif italic mb-6 text-slate-700 dark:text-slate-300">"{project.challenge.quote}"</h3>
                             )}
                             <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                 {project.description}
@@ -79,6 +78,7 @@ export default function CaseStudyDetail() {
                         </div>
                     </section>
 
+                    {/* The Strategy */}
                     <section className="grid grid-cols-1 md:grid-cols-12 gap-12">
                         <div className="md:col-span-4">
                             <h2 className="text-2xl font-bold uppercase tracking-wide border-l-4 border-black dark:border-white pl-4">The Strategy</h2>
@@ -95,6 +95,7 @@ export default function CaseStudyDetail() {
                         </div>
                     </section>
 
+                    {/* The Execution */}
                     <section className="w-full">
                         <div className="mb-12">
                             <h2 className="text-2xl font-bold uppercase tracking-wide border-l-4 border-black dark:border-white pl-4 mb-8">The Execution</h2>
@@ -114,6 +115,47 @@ export default function CaseStudyDetail() {
                         </div>
                     </section>
 
+                    {/* Demo Callout — only renders if demoCallout exists on the project */}
+                    {project.demoCallout && (
+                        <section className="border border-gray-200 dark:border-gray-700 rounded-sm p-8 bg-gray-50 dark:bg-slate-900">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+                                <div>
+                                    <span className="text-xs font-mono uppercase text-gray-500 dark:text-gray-400 block mb-1">Live Demo</span>
+                                    <a
+                                        href={project.demoCallout.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-lg font-bold text-slate-900 dark:text-white underline underline-offset-4 hover:opacity-70 transition-opacity break-all"
+                                    >
+                                        {project.demoCallout.url.replace('https://', '')}
+                                    </a>
+                                </div>
+                                <a
+                                    href={project.demoCallout.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center px-6 py-3 bg-black dark:bg-white text-white dark:text-black text-sm font-bold uppercase tracking-wider hover:opacity-80 transition-opacity whitespace-nowrap"
+                                >
+                                    Explore Live App →
+                                </a>
+                            </div>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{project.demoCallout.note}</p>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                {project.demoCallout.credentials.map((cred, index) => (
+                                    <div key={index} className="bg-white dark:bg-black border border-gray-200 dark:border-gray-700 p-4 rounded-sm">
+                                        <div className="flex items-center justify-between mb-2">
+                                            <span className="text-xs font-mono uppercase font-bold text-slate-900 dark:text-white">{cred.role}</span>
+                                            <span className="text-xs text-gray-400">{cred.description}</span>
+                                        </div>
+                                        <p className="text-xs text-gray-500 dark:text-gray-400 font-mono">{cred.email}</p>
+                                        <p className="text-xs text-gray-500 dark:text-gray-400 font-mono">{cred.password}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    )}
+
+                    {/* Outcomes */}
                     <section className="bg-gray-50 dark:bg-slate-900 -mx-6 md:-mx-12 lg:-mx-24 px-6 md:px-12 lg:px-24 py-24">
                         <div className="max-w-5xl mx-auto">
                             <div className="mb-16 text-center">
@@ -143,6 +185,7 @@ export default function CaseStudyDetail() {
                         </div>
                     </section>
 
+                    {/* Prev / Next Navigation */}
                     <section className="flex justify-between items-center pt-12 border-t border-gray-200 dark:border-gray-800">
                         <Link to={`/case-study/${prevProject.id}`} className="group flex flex-col items-start opacity-70 hover:opacity-100 transition-opacity">
                             <span className="text-xs uppercase tracking-wider text-gray-500 mb-1">Previous</span>
@@ -153,6 +196,7 @@ export default function CaseStudyDetail() {
                             <span className="text-lg font-serif italic group-hover:translate-x-2 transition-transform">{nextProject.title}</span>
                         </Link>
                     </section>
+
                 </div>
             </main>
         </div>
