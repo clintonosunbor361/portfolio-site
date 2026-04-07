@@ -68,5 +68,69 @@ export const caseStudies = [
                 author: "Production Manager"
             }
         }
+    },
+    
+    {
+        id: "2929-clothing",
+        title: "2929 Clothing",
+        subtitle: "Digital Retail Infrastructure for a Streetwear Brand",
+        role: "Digital Systems Consultant",
+        year: "2025",
+        outcome: "Market-Ready eCommerce Operation",
+        roi: "Live Store",
+        image: "https://portfolio-site-2-ecru.vercel.app/2929%20Homepage.png",
+        description: "A streetwear brand targeting international markets needed a full ecommerce operation built from the ground up. The brief was clear — the store had to look and feel custom, be easy for a non-technical team to manage, and have all the operational systems in place to run a real retail business from launch day.",
+        challenge: {
+            title: "The Problem",
+            quote: "The brand had a strong identity and product range but no digital infrastructure. The goal was a store that looked custom-built, could be managed without a developer on call, and was wired for international retail from the start."
+        },
+        strategy: [
+            {
+                title: "Custom Frontend on WordPress",
+                description: "The frontend was written from scratch inside WordPress, giving the brand full design control with no template constraints. WordPress handles content management and ecommerce through WooCommerce on the backend — combining the feel of a custom-built site with the maintainability of the most widely used CMS on the internet, powering over 43% of all websites globally."
+            },
+            {
+                title: "Built for International Retail",
+                description: "The store was structured for a global customer base with the UK as the primary launch market. Navigation, product categories, and policy pages were all set up with that customer in mind. Products are priced in GBP, with a clean category architecture for Men and Women covering Hoodies, T-Shirts, Tracksuits, and Bags."
+            },
+            {
+                title: "Email Marketing with Klaviyo",
+                description: "Klaviyo was connected directly to WooCommerce. Automated welcome sequences and abandoned cart flows were configured before launch, so the brand was capturing and converting from day one rather than retrofitting email marketing after going live."
+            },
+            {
+                title: "Location-Based Payment Configuration",
+                description: "Payment methods were configured dynamically based on the customer's location, presenting the most relevant checkout options for each market. This reduces friction at the most critical point in the funnel and ensures the checkout experience matches what each market expects."
+            },
+            {
+                title: "SMS Order Notifications",
+                description: "SMS notification flows were set up for order confirmations and shipping updates, keeping customers informed automatically at every stage without any manual intervention."
+            },
+            {
+                title: "Analytics and Tracking Foundation",
+                description: "Google Analytics and Meta Pixel were installed and configured correctly before launch. The brand went live with full visibility into where traffic was coming from and how customers were behaving, not guessing after the fact."
+            }
+        ],
+        execution: {
+            title: "The Execution",
+            description: "Every system was treated as part of the retail operation, not an optional extra. The store launched with the infrastructure of an established brand, not a startup figuring things out after going live.",
+            image: "https://portfolio-site-2-ecru.vercel.app/2929%20Homepage.png",
+            caption: "Fig 1.1: 2929 Clothing Homepage"
+        },
+        demoCallout: {
+            url: "https://29twentynineclothing.com",
+            note: "The store is live. Visit it to see the custom frontend, product structure, and checkout experience firsthand.",
+            credentials: []
+        },
+        results: {
+            stats: [
+                { value: "6", label: "Integrated Systems" },
+                { value: "GBP", label: "Market-Aligned Pricing" },
+                { value: "Live", label: "Operational Store" }
+            ],
+            testimonial: {
+                quote: "We launched with everything in place. The store looked exactly how we wanted it, and the backend was simple enough for us to manage ourselves.",
+                author: "Brand Founder"
+            }
+        }
     }
 ];
