@@ -152,18 +152,20 @@ export default function CaseStudyDetail() {
                                 </a>
                             </div>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{project.demoCallout.note}</p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                                {project.demoCallout.credentials.map((cred, index) => (
-                                    <div key={index} className="bg-white dark:bg-black border border-gray-200 dark:border-gray-700 p-4 rounded-sm">
-                                        <div className="flex items-center justify-between mb-2">
-                                            <span className="text-xs font-mono uppercase font-bold text-slate-900 dark:text-white">{cred.role}</span>
-                                            <span className="text-xs text-gray-400">{cred.description}</span>
+                            {project.demoCallout.credentials && project.demoCallout.credentials.length > 0 && (
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                    {project.demoCallout.credentials.map((cred, index) => (
+                                        <div key={index} className="bg-white dark:bg-black border border-gray-200 dark:border-gray-700 p-4 rounded-sm">
+                                            <div className="flex items-center justify-between mb-2">
+                                                <span className="text-xs font-mono uppercase font-bold text-slate-900 dark:text-white">{cred.role}</span>
+                                                <span className="text-xs text-gray-400">{cred.description}</span>
+                                            </div>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 font-mono">{cred.email}</p>
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 font-mono">{cred.password}</p>
                                         </div>
-                                        <p className="text-xs text-gray-500 dark:text-gray-400 font-mono">{cred.email}</p>
-                                        <p className="text-xs text-gray-500 dark:text-gray-400 font-mono">{cred.password}</p>
-                                    </div>
-                                ))}
-                            </div>
+                                    ))}
+                                </div>
+                            )}
                         </section>
                     )}
 
