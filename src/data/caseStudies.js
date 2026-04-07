@@ -75,7 +75,7 @@ export const caseStudies = [
         title: "2929 Clothing",
         subtitle: "Digital Retail Infrastructure for a Streetwear Brand",
         role: "Digital Systems Consultant",
-        year: "2025",
+        year: "2026",
         outcome: "Market-Ready eCommerce Operation",
         roi: "Live Store",
         image: "https://portfolio-site-2-ecru.vercel.app/2929%20Homepage.png",
