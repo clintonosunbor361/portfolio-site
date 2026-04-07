@@ -124,11 +124,11 @@ export const caseStudies = [
         results: {
             stats: [
                 { value: "6", label: "Integrated Systems" },
-                { value: "GBP", label: "Market-Aligned Pricing" },
+                { value: "Location based", label: "Market-Aligned Pricing" },
                 { value: "Live", label: "Operational Store" }
             ],
             testimonial: {
-                quote: "We launched with everything in place. The store looked exactly how we wanted it, and the backend was simple enough for us to manage ourselves.",
+                quote: "We launched with everything in place. The store looked how we wanted it, and the backend was simple enough for us to manage ourselves.",
                 author: "Brand Founder"
             }
         }
