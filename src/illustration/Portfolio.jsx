@@ -20,6 +20,21 @@ export function PortfolioMenu() {
     trigger.current?.focus();
   };
   useEffect(() => {
+    const keyboard = () => {
+      document.documentElement.dataset.inputMethod = "keyboard";
+    };
+    const pointer = () => {
+      document.documentElement.dataset.inputMethod = "pointer";
+    };
+    document.addEventListener("keydown", keyboard);
+    document.addEventListener("pointerdown", pointer);
+    return () => {
+      document.removeEventListener("keydown", keyboard);
+      document.removeEventListener("pointerdown", pointer);
+      delete document.documentElement.dataset.inputMethod;
+    };
+  }, []);
+  useEffect(() => {
     if (!open) return;
     const old = document.body.style.overflow;
     document.body.style.overflow = "hidden";
