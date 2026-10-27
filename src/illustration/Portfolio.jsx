@@ -10,18 +10,6 @@ const stops = [
   "/projects",
 ];
 
-function StatusBar() {
-  return (
-    <div className="phone-status" aria-hidden="true">
-      <span>11:30</span>
-      <div>
-        <img src={asset("status", "svg")} width="91" height="32" alt="" />
-        <span className="battery">45</span>
-      </div>
-    </div>
-  );
-}
-
 export function PortfolioMenu() {
   const [open, setOpen] = useState(false);
   const trigger = useRef(null);
@@ -147,7 +135,6 @@ function Screen({ children, className = "", index = 0 }) {
           index === 0 ? "Introduction" : `Reason ${index} to hire Clinton`
         }
       >
-        <StatusBar />
         {children}
         <div className="home-indicator" aria-hidden="true" />
       </article>
