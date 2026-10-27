@@ -138,33 +138,8 @@ function Screen({ children, className = "", index = 0 }) {
         <div className="screen-content" key={index}>
           {children}
         </div>
-        <footer className="onboarding-footer">
-          <Progress point={index} />
-          <nav className="screen-controls" aria-label="Screen navigation">
-            {index > 0 && <Link to={stops[index - 1]}>← Previous</Link>}
-            <Link to={stops[index + 1] || "/projects"}>
-              {index === 3 ? "View projects" : "Continue"} →
-            </Link>
-          </nav>
-        </footer>
       </article>
     </main>
-  );
-}
-
-function Progress({ point = 0 }) {
-  return (
-    <nav className="progress" aria-label="Reasons to hire me">
-      {[1, 2, 3].map((i) => (
-        <Link
-          key={i}
-          to={`/why-hire-me/${i}`}
-          aria-label={`Reason ${i}`}
-          aria-current={point === i ? "step" : undefined}
-          className={point === i || (point === 0 && i === 1) ? "active" : ""}
-        />
-      ))}
-    </nav>
   );
 }
 

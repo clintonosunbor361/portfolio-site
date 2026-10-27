@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
   font-family: "Bodoni Moda";
   font-style: normal;
   font-weight: 700;
@@ -154,52 +154,6 @@ img {
   letter-spacing: -0.5cqw;
   line-height: 1;
 }
-.progress {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  margin: 3cqw auto 0;
-  position: relative;
-  z-index: 1;
-}
-.progress a {
-  width: 3.78cqw;
-  min-width: 24px;
-  min-height: 36px;
-  display: grid;
-  place-items: center;
-  text-decoration: none;
-}
-.progress a:before {
-  content: "";
-  display: block;
-  width: 1.96cqw;
-  height: 1.96cqw;
-  border-radius: 50%;
-  background: #ddd;
-}
-.progress a.active:before {
-  background: #006b55;
-}
-.intro-screen .progress a.active:before {
-  background: #282828;
-}
-.screen-controls {
-  display: flex;
-  justify-content: flex-end;
-  gap: 20px;
-  max-width: 620px;
-  margin: 18px auto 0;
-  font-size: 14px;
-}
-.screen-controls a {
-  text-decoration: none;
-  padding: 12px 4px;
-  min-height: 44px;
-}
-.screen-controls a:first-child:not(:last-child) {
-  margin-right: auto;
-}
 .menu-trigger {
   position: fixed;
   right: 16px;
@@ -346,15 +300,6 @@ img {
 .reason-1 .reason-prose {
   font-size: 3.92cqw;
   line-height: 1.5;
-}
-.reason-screen .progress {
-  margin-top: 5cqw;
-}
-.reason-1 .progress {
-  margin-top: 15cqw;
-}
-.reason-3 .progress {
-  margin-top: 2cqw;
 }
 .projects-shell {
   padding: 24px;
@@ -540,9 +485,6 @@ img {
   .phone-screen {
     border-radius: 0;
   }
-  .screen-controls {
-    margin: 0 7.42% 16px;
-  }
   .projects-shell {
     padding: 0;
   }
@@ -597,7 +539,7 @@ img {
     transform: translateY(-4px);
   }
 }
-/* Onboarding owns the viewport; only its reading area scrolls when needed. */
+/* Onboarding owns the viewport; its reading area scrolls when needed. */
 .illustration-shell {
   height: 100vh;
   height: 100dvh;
@@ -622,29 +564,6 @@ img {
   padding-top: max(24px, env(safe-area-inset-top));
   padding-bottom: 18px;
 }
-.onboarding-footer {
-  flex: none;
-  background: #fff;
-  padding: 0 7.42% max(12px, env(safe-area-inset-bottom));
-  border-top: 1px solid #f3f3f1;
-}
-.onboarding-footer .progress {
-  margin: 0;
-}
-.onboarding-footer .progress a {
-  width: 30px;
-  min-height: 44px;
-}
-.onboarding-footer .progress a::before {
-  width: 8px;
-  height: 8px;
-}
-.onboarding-footer .screen-controls {
-  margin: 0;
-  padding-right: 42px;
-  font-size: 14px;
-  line-height: 20px;
-}
 .intro-screen .screen-content {
   display: flex;
   flex-direction: column;
@@ -667,7 +586,7 @@ img {
 .mosaic {
   container-type: inline-size;
   flex: none;
-  width: min(94%, calc((100dvh - 248px) * 0.74));
+  width: min(94%, calc((100dvh - 190px) * 0.74));
   min-width: 230px;
   margin: 0;
 }
@@ -749,12 +668,6 @@ img {
   .reason-art,
   .ownership-art {
     width: min(65%, 260px);
-  }
-  .onboarding-footer .progress {
-    display: none;
-  }
-  .onboarding-footer {
-    padding-bottom: max(6px, env(safe-area-inset-bottom));
   }
 }
 @media (prefers-reduced-motion: reduce) {
