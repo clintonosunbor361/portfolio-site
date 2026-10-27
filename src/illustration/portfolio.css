@@ -315,9 +315,19 @@ img {
 }
 .projects-intro {
   display: grid;
-  grid-template-columns: 390fr 116fr;
-  gap: 12.66%;
+  grid-template-columns: minmax(0, 1fr) clamp(90px, 27cqw, 150px);
+  gap: 14px 20px;
   align-items: center;
+}
+.projects-intro > div {
+  display: contents;
+}
+.projects-intro .eyebrow,
+.projects-intro h1 {
+  grid-column: 1 / -1;
+}
+.projects-intro .eyebrow {
+  font-size: clamp(12px, 2.96cqw, 16px);
 }
 .eyebrow {
   color: #055740;
@@ -328,19 +338,21 @@ img {
   margin: 0;
 }
 .projects-intro h1 {
-  font-size: 6.58cqw;
+  font-size: clamp(30px, 7.8cqw, 46px);
   line-height: 1.08;
   letter-spacing: -0.26cqw;
   font-weight: 900;
-  margin: 2.3cqw 0;
+  margin: 0;
 }
 .projects-description {
-  font-size: 4.11cqw;
+  font-size: clamp(18px, 4.8cqw, 26px);
   line-height: 1.38;
   margin: 0;
   letter-spacing: -0.07cqw;
 }
 .projects-intro > img {
+  grid-column: 2;
+  grid-row: 3;
   width: 100%;
   aspect-ratio: 116 / 162.4;
   object-fit: cover;
@@ -514,6 +526,16 @@ img {
     gap: 7.05%;
     min-height: 310px;
   }
+  .projects-intro > div {
+    display: block;
+  }
+  .projects-intro > img {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .projects-intro .eyebrow {
+    font-size: 20px;
+  }
   .eyebrow {
     font-size: 20px;
   }
@@ -587,6 +609,55 @@ img {
 }
 .mosaic .and {
   font-size: 10.9cqw;
+}
+.intro-explore {
+  width: 89.6%;
+  margin-top: 2px;
+}
+.intro-explore > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #055740;
+  margin: 0 0 14px;
+}
+.intro-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+.intro-tabs a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 10px 12px;
+  border-radius: 24px;
+  background: #f0f6f2;
+  color: #055740;
+  font-size: 14px;
+  text-decoration: none;
+}
+.intro-tabs a:hover {
+  background: #dceee3;
+}
+.intro-tabs span {
+  font-weight: 800;
+}
+@media (hover: hover) and (pointer: fine) {
+  .intro-explore > p {
+    font-size: 0;
+  }
+  .intro-explore > p::before {
+    content: "Explore why you should hire me";
+    font-size: 15px;
+  }
+  .intro-explore > p span {
+    display: none;
+  }
 }
 .reason-heading {
   margin: 0 7.42% 18px;

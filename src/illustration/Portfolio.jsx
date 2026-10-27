@@ -177,6 +177,22 @@ export function Introduction() {
         <span className="word roles">Roles.</span>
         <img className="mosaic-path" src={asset("path")} alt="" />
       </Link>
+      <div className="intro-explore">
+        <p>
+          Swipe left to explore <span aria-hidden="true">←</span>
+        </p>
+        <nav className="intro-tabs" aria-label="Explore why you should hire me">
+          <Link to="/why-hire-me/1">
+            <span>01</span> Perspective
+          </Link>
+          <Link to="/why-hire-me/2">
+            <span>02</span> Ownership
+          </Link>
+          <Link to="/why-hire-me/3">
+            <span>03</span> Hands-On
+          </Link>
+        </nav>
+      </div>
     </Screen>
   );
 }
