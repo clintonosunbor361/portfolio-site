@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import useScrollMotion from "./useScrollMotion";
 
 const asset = (name, ext = "png") => `/illustrations/${name}.${ext}`;
 const stops = [
@@ -116,6 +117,7 @@ export function PortfolioMenu() {
 
 function Screen({ children, className = "", index = 0 }) {
   const navigate = useNavigate();
+  const motion = useScrollMotion(index);
   const touch = useRef(null);
   function endTouch(event) {
     if (!touch.current) return;
@@ -150,7 +152,7 @@ function Screen({ children, className = "", index = 0 }) {
           index === 0 ? "Introduction" : `Reason ${index} to hire Clinton`
         }
       >
-        <div className="screen-content" key={index}>
+        <div className="screen-content" key={index} ref={motion}>
           {children}
         </div>
       </article>
@@ -359,8 +361,9 @@ const projects = [
 ];
 
 export function Projects() {
+  const motion = useScrollMotion("projects");
   return (
-    <main className="projects-shell">
+    <main className="projects-shell" ref={motion}>
       <section className="projects-page" aria-labelledby="projects-title">
         <header className="projects-intro">
           <div>
