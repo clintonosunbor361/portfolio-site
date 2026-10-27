@@ -539,36 +539,26 @@ img {
     transform: translateY(-4px);
   }
 }
-/* Onboarding owns the viewport; its reading area scrolls when needed. */
+/* Pages grow with their content and use the browser's normal scrolling. */
 .illustration-shell {
-  height: 100vh;
-  height: 100dvh;
-  padding: 20px;
-  display: flex;
-  justify-content: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 24px;
 }
 .phone-screen {
-  width: min(100%, 620px);
-  height: 100%;
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  min-height: calc(100dvh - 48px);
   padding: 0;
 }
 .screen-content {
-  flex: 1;
-  min-height: 0;
-  overflow: auto;
-  overscroll-behavior-y: contain;
-  scrollbar-width: thin;
   padding-top: max(24px, env(safe-area-inset-top));
-  padding-bottom: 18px;
+  padding-bottom: max(40px, env(safe-area-inset-bottom));
 }
 .intro-screen .screen-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(12px, 2.4dvh, 22px);
+  gap: 24px;
 }
 .intro-copy {
   flex: none;
@@ -586,8 +576,7 @@ img {
 .mosaic {
   container-type: inline-size;
   flex: none;
-  width: min(94%, calc((100dvh - 190px) * 0.74));
-  min-width: 230px;
+  width: 94%;
   margin: 0;
 }
 .mosaic .word {
@@ -614,7 +603,7 @@ img {
 }
 .reason-art,
 .ownership-art {
-  width: min(90.2%, calc(27dvh * 644 / 480));
+  width: 90.2%;
   border-radius: 18px;
 }
 .ownership-art {
@@ -655,19 +644,11 @@ img {
   }
   .phone-screen {
     width: 100%;
+    min-height: 100dvh;
     border-radius: 0;
   }
   .menu-trigger {
     bottom: max(18px, env(safe-area-inset-bottom));
-  }
-}
-@media (max-height: 500px) {
-  .screen-content {
-    padding-top: 16px;
-  }
-  .reason-art,
-  .ownership-art {
-    width: min(65%, 260px);
   }
 }
 @media (prefers-reduced-motion: reduce) {
