@@ -135,15 +135,19 @@ function Screen({ children, className = "", index = 0 }) {
           index === 0 ? "Introduction" : `Reason ${index} to hire Clinton`
         }
       >
-        {children}
-        <div className="home-indicator" aria-hidden="true" />
+        <div className="screen-content" key={index}>
+          {children}
+        </div>
+        <footer className="onboarding-footer">
+          <Progress point={index} />
+          <nav className="screen-controls" aria-label="Screen navigation">
+            {index > 0 && <Link to={stops[index - 1]}>← Previous</Link>}
+            <Link to={stops[index + 1] || "/projects"}>
+              {index === 3 ? "View projects" : "Continue"} →
+            </Link>
+          </nav>
+        </footer>
       </article>
-      <div className="screen-controls" aria-label="Screen navigation">
-        {index > 0 && <Link to={stops[index - 1]}>← Previous</Link>}
-        <Link to={stops[index + 1] || "/projects"}>
-          {index === 3 ? "View projects" : "Continue"} →
-        </Link>
-      </div>
     </main>
   );
 }
@@ -198,7 +202,6 @@ export function Introduction() {
         <span className="word roles">Roles.</span>
         <img className="mosaic-path" src={asset("path")} alt="" />
       </Link>
-      <Progress />
     </Screen>
   );
 }
@@ -297,7 +300,6 @@ export function ReasonScreen() {
           ))}
         </div>
       </section>
-      <Progress point={number} />
     </Screen>
   );
 }

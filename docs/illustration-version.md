@@ -14,7 +14,7 @@ Mobile-first implementation of the five screens selected in Figma node `581:221`
 
 The illustrations and SVGs in `public/illustrations` are the exact assets supplied by Figma design context. No screen is implemented as a flattened screenshot. Bodoni Moda, Oswald, and Barlow Condensed are hosted locally. SF Pro uses the native Apple system font where available, with Helvetica/Arial fallbacks on other platforms; its proprietary font files are not bundled.
 
-The mosaic and cards retain their Figma proportions. Reading content flows naturally to avoid the overlaps and clipped text present in the fixed-height Ownership layout. Larger screens retain a bounded onboarding reading area; Projects changes to two columns at 1000px. Browser navigation, arrow keys on the focused screen, touch swipes, previous/next links, progress links, and a keyboard-accessible menu connect the screens. Reduced-motion preferences disable movement.
+The mosaic and cards retain their Figma proportions. Onboarding fills the dynamic viewport height (`100dvh`) with progress and navigation in an anchored footer. Artwork and spacing adapt to the available height, while body text remains at least 16px. Content can scroll inside the reading area on shorter devices without hiding navigation. Decorative phone status bars and home-indicator lines are omitted. Larger screens retain a bounded onboarding reading area; Projects remains a normal scrolling page and changes to two columns at 1000px. Browser navigation, arrow keys on the focused screen, touch swipes, previous/next links, progress links, and a keyboard-accessible menu connect the screens. Reduced-motion preferences disable movement.
 
 The Production card opens the existing production case study. Prodiva opens a concise text case study based on the supplied project context; it makes no measured-result claims. Existing case study content is preserved. About and other unselected Figma screens are outside this first implementation.
 
@@ -25,5 +25,6 @@ The Production card opens the existing production case study. Prodiva opens a co
 - Browser checks at 320, 390, 714, 768, and 1440px for all five screens: no horizontal overflow, all image assets loaded.
 - Visual comparison of mobile, Figma-width, and desktop screenshots.
 - Navigation checks for the mosaic, progress, menu, both project cards, keyboard arrows, touch swipes, focus wrap/restoration, and reduced motion.
+- Viewport-height checks for all four onboarding screens at 320×568, 390×667, 390×844, 768×1024, 844×390, and 1440×900: no document overflow, footer visible, body type at least 16px, and all internally scrolling content reachable.
 
 Work is isolated to `illustration-version`. Publishing the branch does not merge it into `main`.
