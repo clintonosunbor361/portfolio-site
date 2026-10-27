@@ -1,9 +1,14 @@
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { useLayoutEffect } from 'react';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import CaseStudyDetail from './components/CaseStudyDetail';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
+import CaseStudyDetail from "./components/CaseStudyDetail";
+import {
+  Introduction,
+  ReasonScreen,
+  Projects,
+  PortfolioMenu,
+  ProdivaStory,
+} from "./illustration/Portfolio";
+import "./illustration/portfolio.css";
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -19,13 +24,15 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="min-h-[100svh] bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-slate-300 dark:selection:bg-slate-700">
-        <Navbar />
+      <div className="illustration-app">
+        <PortfolioMenu />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Introduction />} />
+          <Route path="/why-hire-me/:point" element={<ReasonScreen />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/case-study/prodiva" element={<ProdivaStory />} />
           <Route path="/case-study/:id" element={<CaseStudyDetail />} />
         </Routes>
-        <Footer />
       </div>
     </BrowserRouter>
   );
