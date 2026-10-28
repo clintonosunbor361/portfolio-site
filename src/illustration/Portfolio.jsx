@@ -265,6 +265,8 @@ const reasons = [
   },
 ];
 
+const reasonTabs = ["Perspective", "Ownership", "Hands-On"];
+
 export function ReasonScreen() {
   const { point } = useParams();
   const number = Number(point);
@@ -277,6 +279,23 @@ export function ReasonScreen() {
     );
   return (
     <Screen className={`reason-screen reason-${number}`} index={number}>
+      <div className="reason-progress">
+        <p className="reason-progress-heading">Reasons you should hire me</p>
+        <nav className="reason-tabs" aria-label="Reasons to hire me">
+          {reasonTabs.map((label, index) => (
+            <Link
+              key={label}
+              to={`/why-hire-me/${index + 1}`}
+              aria-label={`Reason ${index + 1}: ${label}`}
+              aria-current={number === index + 1 ? "page" : undefined}
+              data-complete={index + 1 < number ? "" : undefined}
+            >
+              <span className="reason-tab-number">0{index + 1}</span>
+              <span className="reason-tab-line" aria-hidden="true" />
+            </Link>
+          ))}
+        </nav>
+      </div>
       <header className="reason-heading">
         <span className="reason-number" aria-hidden="true">
           0{number}
