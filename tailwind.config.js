@@ -9,7 +9,7 @@ export default {
     extend: {
       colors: {
         primary: "#1e293b", // Slate 800
-        "background-light": "#f8f9fa", // Very light gray/white
+        "background-light": "#fff", // White
         "background-dark": "#0f172a", // Slate 900
         "accent-light": "#cbd5e1", // Slate 300
         "accent-dark": "#334155", // Slate 700
