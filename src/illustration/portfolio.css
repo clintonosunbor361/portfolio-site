@@ -669,6 +669,56 @@ img {
   margin: 0 7.42% 18px;
   min-height: 0;
 }
+.reason-progress {
+  width: min(62%, 420px);
+  margin: 0 auto 28px;
+  text-align: center;
+}
+.reason-progress-heading {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 4.8cqw, 26px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+.reason-tabs {
+  display: flex;
+  gap: 8px;
+}
+.reason-tabs a {
+  flex: 1;
+  min-width: 0;
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  color: #777;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.reason-tab-line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 3px;
+  background: #e3e3e3;
+}
+.reason-tabs a[aria-current="page"],
+.reason-tabs a[data-complete] {
+  color: #055740;
+}
+.reason-tabs a[aria-current="page"] .reason-tab-line,
+.reason-tabs a[data-complete] .reason-tab-line {
+  background: #055740;
+}
+.reason-tabs a:hover .reason-tab-line {
+  background: #83b7a0;
+}
+.reason-tabs a[aria-current="page"]:hover .reason-tab-line {
+  background: #055740;
+}
 .reason-heading h1 {
   font-size: clamp(28px, 8.4cqw, 48px);
   line-height: 1.18;
