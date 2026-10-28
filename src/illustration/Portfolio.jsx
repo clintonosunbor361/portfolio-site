@@ -169,7 +169,7 @@ export function Introduction() {
           <br />
           Clinton Osunbor.
         </h1>
-        <p>Here’s why you should hire me for your:</p>
+        <p>Swipe to see why you should hire me for your:</p>
       </header>
       <Link
         to="/why-hire-me/1"
