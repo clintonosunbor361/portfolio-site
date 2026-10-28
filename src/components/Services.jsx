@@ -23,7 +23,7 @@ export default function Services() {
     ];
 
     return (
-        <section id="services" className="py-24 px-6 md:px-12 lg:px-24 border-t border-gray-200 dark:border-gray-800 bg-gray-50/50 dark:bg-slate-900/50">
+        <section id="services" className="py-24 px-6 md:px-12 lg:px-24 border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-slate-900/50">
             <div className="mb-16">
                 <span className="bg-gray-200 dark:bg-gray-800 px-3 py-1 text-xs uppercase tracking-wider font-semibold text-slate-800 dark:text-slate-200">
                     Core Competencies
